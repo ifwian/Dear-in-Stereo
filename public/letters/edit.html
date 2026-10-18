@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Write a letter — Dear, in Stereo</title>
+<meta name="description" content="Some things are easier to say through a song.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f3ecdd">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main id="main" class="wrap page"><div class="page__head"><div><h1>Write a song letter</h1><p>Fill in the song, say what it means, then check the preview.</p></div></div>
+<div id="status"></div>
+<div class="two-col two-col--editor">
+<form id="letter-form" novalidate>
+<section class="form-section" aria-labelledby="s1"><h2 id="s1"><span class="step-no" aria-hidden="true">1</span>The song</h2>
+<div class="field"><label for="song_url">Spotify or YouTube link</label>
+<div class="input-group"><input id="song_url" name="song_url" type="url" inputmode="url" autocomplete="off" placeholder="https://open.spotify.com/track/…" aria-describedby="url-verdict"><button type="button" class="btn btn--small" id="lookup">Look up details</button></div>
+<div id="url-verdict" class="verdict" aria-live="polite"></div></div>
+<div class="grid-2"><div class="field"><label for="song_title">Song title</label><input id="song_title" name="song_title" type="text" maxlength="200"></div>
+<div class="field"><label for="artist">Artist</label><input id="artist" name="artist" type="text" maxlength="200"></div></div>
+<div class="field"><label for="artwork_url">Artwork link <span class="muted">(optional)</span></label><input id="artwork_url" name="artwork_url" type="url" inputmode="url" maxlength="500" aria-describedby="art-hint"><span class="hint" id="art-hint">An https image link. Without one, a record is drawn for you.</span></div></section>
+<section class="form-section" aria-labelledby="s2"><h2 id="s2"><span class="step-no" aria-hidden="true">2</span>The letter</h2>
+<div class="grid-2"><div class="field"><label for="recipient_name">Who is it for?</label><input id="recipient_name" name="recipient_name" type="text" maxlength="80"></div>
+<div class="field"><label for="title">Letter title</label><input id="title" name="title" type="text" maxlength="120" required></div></div>
+<div class="field"><label for="message">Your message</label><textarea id="message" name="message" maxlength="5000" aria-describedby="msg-count"></textarea><div class="counter" id="msg-count">0 / 5000</div></div>
+<div class="grid-2"><div class="field"><label for="reason_category">Why this song?</label><select id="reason_category" name="reason_category"></select></div>
+<div class="field" id="custom-wrap" hidden><label for="custom_reason">In your own words</label><input id="custom_reason" name="custom_reason" type="text" maxlength="140"></div></div></section>
+<section class="form-section" aria-labelledby="s3"><h2 id="s3"><span class="step-no" aria-hidden="true">3</span>The look</h2>
+<fieldset><legend>Choose a paper</legend><div class="theme-picker"><label><input type="radio" name="theme" value="paper" checked><span class="swatch" data-theme="paper"></span>Paper</label><label><input type="radio" name="theme" value="ink"><span class="swatch" data-theme="ink"></span>Ink</label><label><input type="radio" name="theme" value="rosewood"><span class="swatch" data-theme="rosewood"></span>Rosewood</label><label><input type="radio" name="theme" value="kraft"><span class="swatch" data-theme="kraft"></span>Kraft</label><label><input type="radio" name="theme" value="dusk"><span class="swatch" data-theme="dusk"></span>Dusk</label></div></fieldset>
+<div class="check"><input type="checkbox" id="show_sender" name="show_sender" checked><label for="show_sender">Show my name on the letter</label></div>
+<div class="field"><label for="sender_display_name">Name to sign with <span class="muted">(optional)</span></label><input id="sender_display_name" name="sender_display_name" type="text" maxlength="60" aria-describedby="sign-hint"><span class="hint" id="sign-hint">Leave empty to use your display name. Unchecking the box above sends the letter without a name.</span></div></section>
+<section class="form-section" aria-labelledby="s4"><h2 id="s4"><span class="step-no" aria-hidden="true">4</span>Sharing</h2>
+<div class="field"><label for="visibility">Who can open it?</label><select id="visibility" name="visibility"><option value="link">Anyone with the link, once published</option><option value="private">Only me (no link)</option></select></div>
+<div class="check"><input type="checkbox" id="allow_responses" name="allow_responses"><label for="allow_responses">Let the recipient write back</label></div>
+<div class="grid-2"><div class="field"><label for="scheduled_at">Open on <span class="muted">(optional)</span></label><input id="scheduled_at" name="scheduled_at" type="datetime-local"></div>
+<div class="field"><label for="expires_at">Close the link on <span class="muted">(optional)</span></label><input id="expires_at" name="expires_at" type="datetime-local"></div></div>
+<p class="hint">Times are in <strong id="tz">your time zone</strong>. Before the opening time the link shows nothing about the letter.</p>
+<div class="notice"><p class="small">A share link works for anyone who has it. It cannot prove who is reading, and the letter is not end-to-end encrypted.</p></div></section>
+<div class="cluster"><button type="submit" class="btn" id="btn-draft" data-action="draft">Save draft</button><button type="submit" class="btn btn--accent" id="btn-publish" data-action="publish">Publish letter</button><a class="btn btn--text" href="/letters/">Cancel</a></div>
+</form>
+<aside class="sticky" aria-labelledby="preview-h"><h2 id="preview-h">Preview</h2><p class="small muted">This is what the recipient will see.</p><div id="preview"></div></aside>
+</div></main>
+<footer id="site-footer"></footer>
+<script type="module" src="/js/pages/letter-edit.js"></script>
+</body>
+</html>

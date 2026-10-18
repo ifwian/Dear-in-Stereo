@@ -1,0 +1,30 @@
+{
+  "name": "dear-in-stereo",
+  "version": "1.0.0",
+  "description": "Dear, in Stereo \u2014 turn songs into letters and mixtapes.",
+  "main": "server/index.js",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "db:setup": "node scripts/setup-db.js",
+    "test": "node scripts/run-tests.js"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "express-mysql-session": "^3.0.3",
+    "express-rate-limit": "^7.5.1",
+    "express-session": "^1.19.0",
+    "helmet": "^8.3.0",
+    "mysql2": "^3.24.6"
+  },
+  "overrides": {
+    "mysql2": "$mysql2"
+  }
+}

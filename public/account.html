@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Account — Dear, in Stereo</title>
+<meta name="description" content="Some things are easier to say through a song.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f3ecdd">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main id="main" class="wrap page"><div class="page__head"><div><h1>Account</h1></div></div><div id="status"></div>
+<div class="two-col">
+<div>
+<section aria-labelledby="prof-h"><h2 id="prof-h">Profile</h2>
+<form id="profile-form" novalidate>
+<div class="field"><label for="display_name">Display name</label><input id="display_name" name="display_name" type="text" maxlength="60" required></div>
+<div class="field"><label for="bio">About you <span class="muted">(optional)</span></label><textarea id="bio" name="bio" maxlength="280"></textarea></div>
+<p class="small muted">Signed in as <span id="email"></span>.</p>
+<button class="btn btn--primary" type="submit">Save profile</button></form></section>
+<section class="section" aria-labelledby="pw-h"><h2 id="pw-h">Change password</h2>
+<form id="password-form" novalidate>
+<div class="field"><label for="current_password">Current password</label>
+<div class="input-group"><input id="current_password" name="current_password" type="password" autocomplete="current-password" required>
+<button type="button" class="btn btn--small" data-toggle-password="current_password" aria-pressed="false">Show</button></div></div>
+<div class="field"><label for="new_password">New password</label>
+<div class="input-group"><input id="new_password" name="new_password" type="password" autocomplete="new-password" required aria-describedby="new_password-hint">
+<button type="button" class="btn btn--small" data-toggle-password="new_password" aria-pressed="false">Show</button></div><span class="hint" id="new_password-hint">At least 10 characters, with a letter and a number. Changing it signs out your other devices.</span></div>
+<button class="btn btn--primary" type="submit">Change password</button></form></section>
+</div>
+<div>
+<section aria-labelledby="sess-h"><h2 id="sess-h">Sessions</h2>
+<p>You stay signed in on this device for up to seven days, or until you log out.</p>
+<div class="cluster"><button class="btn" type="button" id="logout">Log out</button><button class="btn" type="button" id="logout-all">Log out everywhere</button></div></section>
+<section class="section" aria-labelledby="del-h"><h2 id="del-h">Delete account</h2>
+<div class="notice notice--warn stack"><p>This permanently deletes your account, every letter and mixtape you made, and all replies you received. Share links stop working immediately. It cannot be undone.</p>
+<form id="delete-form" novalidate>
+<div class="field"><label for="del_password">Your password</label>
+<div class="input-group"><input id="del_password" name="password" type="password" autocomplete="current-password" required>
+<button type="button" class="btn btn--small" data-toggle-password="del_password" aria-pressed="false">Show</button></div></div>
+<div class="field"><label for="confirm">Type DELETE to confirm</label><input id="confirm" name="confirm" type="text" autocomplete="off"></div>
+<button class="btn btn--danger" type="submit">Delete my account</button></form></div></section>
+</div></div></main>
+<footer id="site-footer"></footer>
+<script type="module" src="/js/pages/account.js"></script>
+</body>
+</html>

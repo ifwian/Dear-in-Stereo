@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dear, in Stereo — turn a song into a letter</title>
+<meta name="description" content="Some things are easier to say through a song.">
+
+<meta name="theme-color" content="#f3ecdd">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main id="main">
+<div class="wrap hero">
+  <div>
+    <h1>Dear, someone. Here is a song.</h1>
+    <p class="hero__lede">Write a letter around the song you cannot stop thinking about. Your words on one side, the music on the other. Send it with a private link and keep an archive of everything you have sent.</p>
+    <div class="hero__actions"><a class="btn btn--accent" href="/register">Write a song letter</a><a class="btn" href="/how-it-works">See how it works</a></div>
+  </div>
+  <div class="reveal" id="reveal">
+    <div class="reveal__envelope" id="envelope">
+      <div class="disc" aria-hidden="true"></div>
+      <p>For Sam</p>
+      <p class="small muted">A sample letter. Nothing here is saved.</p>
+      <button type="button" class="btn btn--primary" id="open-sample" aria-controls="sample-slot" aria-expanded="false">Open the letter</button>
+    </div>
+    <div id="sample-slot" aria-live="polite"></div>
+  </div>
+</div>
+<section class="wrap section" aria-labelledby="how-h">
+  <h2 id="how-h">From a song to their screen in three steps</h2>
+  <ol class="steps">
+    <li><h3>Pick the song</h3><p>Paste a Spotify or YouTube link. We build the player from the link, and you can fill in the title and artist yourself.</p></li>
+    <li><h3>Say what it means</h3><p>Write the message, choose why you are sending it, and pick a paper. A live preview shows exactly what they will see.</p></li>
+    <li><h3>Send the link</h3><p>Copy a private link, or schedule the letter to open later. They do not need an account to read it or to answer.</p></li>
+  </ol>
+</section>
+<section class="wrap section" aria-labelledby="feat-h">
+  <h2 id="feat-h">What you can keep and send</h2>
+  <div class="features">
+    <article class="feature"><div class="feature__art"><div class="songcard__art disc" data-theme="paper" aria-hidden="true"></div></div><h3>Song letters</h3><p>One song, one message, one person. Choose a reason, a paper, and whether your name appears.</p></article>
+    <article class="feature"><div class="feature__art"><div class="tape tape--small" data-theme="kraft" aria-hidden="true"><div class="tape__label"><span class="tape__title">Drive home</span></div><div class="tape__window"><span class="tape__reel"></span><span class="tape__reel"></span></div></div></div><h3>Mixtapes</h3><p>Gather songs into an ordered collection with a note on each track, then share the whole tape.</p></article>
+    <article class="feature"><div class="feature__art"><svg width="120" height="70" viewBox="0 0 120 70" role="img" aria-label="Stack of letters"><rect x="14" y="14" width="88" height="46" fill="#fbf6ea" stroke="#1d1a17" stroke-width="1.5"/><rect x="22" y="8" width="88" height="46" fill="#fbf6ea" stroke="#1d1a17" stroke-width="1.5"/><path d="M32 22h50M32 30h60M32 38h36" stroke="#9f372f" stroke-width="2"/></svg></div><h3>A personal archive</h3><p>Search, filter and revisit everything you have written. Close a link whenever you want and it stops working at once.</p></article>
+  </div>
+</section>
+<section class="wrap closing"><h2>Is there a song you have been meaning to send?</h2><p class="muted">It takes a few minutes to write, and it will last longer than a text.</p><a class="btn btn--accent" href="/register">Start your first letter</a></section>
+</main>
+<footer id="site-footer"></footer>
+<script type="module" src="/js/pages/landing.js"></script>
+</body>
+</html>

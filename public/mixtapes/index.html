@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mixtapes — Dear, in Stereo</title>
+<meta name="description" content="Some things are easier to say through a song.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f3ecdd">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main id="main" class="wrap page"><div class="page__head"><div><h1>Mixtapes</h1><p>Ordered collections of songs, each with a note if you like.</p></div><div class=cluster><button type="button" class="btn btn--accent" id="new-tape">New mixtape</button></div></div>
+<form id="filters" class="filters" role="search" aria-label="Filter mixtapes">
+<div class="field field--wide"><label for="q">Search</label><input id="q" name="q" type="search" placeholder="Title or description" maxlength="100"></div>
+<div class="field"><label for="status">Status</label><select id="status" name="status"><option value="">All</option><option value="draft">Not shared</option><option value="published">Shared</option></select></div>
+<div class="field"><label for="sort">Sort by</label><select id="sort" name="sort"><option value="updated">Recently updated</option><option value="newest">Newest</option><option value="oldest">Oldest</option><option value="title">Title</option></select></div>
+</form>
+<p id="result-count" class="small muted" aria-live="polite"></p>
+<div id="list"></div><div id="pager" class="pager"></div></main>
+<footer id="site-footer"></footer>
+<script type="module" src="/js/pages/mixtapes-list.js"></script>
+</body>
+</html>

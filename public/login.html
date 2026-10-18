@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in — Dear, in Stereo</title>
+<meta name="description" content="Some things are easier to say through a song.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f3ecdd">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main id="main" class="wrap page page--narrow">
+<h1>Welcome back</h1><p class="muted">Log in to see your letters, mixtapes and replies.</p>
+<form id="auth-form" data-mode="login" novalidate class="section">
+<div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="password">Password</label>
+<div class="input-group"><input id="password" name="password" type="password" autocomplete="current-password" required>
+<button type="button" class="btn btn--small" data-toggle-password="password" aria-pressed="false">Show</button></div></div>
+<button class="btn btn--primary" type="submit">Log in</button>
+</form>
+<p class="section muted">New here? <a href="/register">Create an account</a>.</p>
+</main>
+<footer id="site-footer"></footer>
+<script type="module" src="/js/pages/auth.js"></script>
+</body>
+</html>
